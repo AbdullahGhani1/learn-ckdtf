@@ -24,11 +24,11 @@ duck.favouriteFood = 'Pizza';
 
 console.log(duck);
 
-function makeDuckQuack(duck: Duck, times: number = 1): void {
+const makeDuckQuack = (duck: Duck, times: number = 1): void => {
   const quackCount = times;
   for (let i = 0; i < quackCount; i++) {
     console.log(`${duck.name} says: Quack`);
   }
-}
+};
 
 makeDuckQuack(duck, 2);

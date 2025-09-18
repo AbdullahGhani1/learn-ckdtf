@@ -1,3 +1,5 @@
+import PondDuck from './PondDuck';
+
 const duckName: string = 'Daffy';
 const duckAge: number = 3;
 
@@ -32,3 +34,9 @@ const makeDuckQuack = (duck: Duck, times: number = 1): void => {
 };
 
 makeDuckQuack(duck, 2);
+
+const duck1 = new PondDuck('Donald', 2, 'Mallard', 'Green', 'Bread');
+duck1.quack();
+duck1.fly();
+duck1.land();
+duck1.land();

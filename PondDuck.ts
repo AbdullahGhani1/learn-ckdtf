@@ -1,12 +1,14 @@
+import { DuckColor, DuckType } from './types';
+
 export default class PondDuck {
   name: string;
   age: number;
-  type: string;
-  color: string;
+  type: DuckType;
+  color: DuckColor;
   isFlying: boolean;
   favouriteFood?: string;
 
-  constructor(name: string, age: number, type: string, color: string, favouriteFood?: string) {
+  constructor(name: string, age: number, type: DuckType, color: DuckColor, favouriteFood?: string) {
     this.name = name;
     this.age = age;
     this.color = color;
@@ -14,6 +16,7 @@ export default class PondDuck {
     this.isFlying = false;
     this.favouriteFood = favouriteFood;
   }
+
   quack(times: number = 1): void {
     console.log(`${this.name} says: Quack!`);
     for (let i = 0; i < times; i++) {

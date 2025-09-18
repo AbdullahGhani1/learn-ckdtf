@@ -1,4 +1,5 @@
 import PondDuck from './PondDuck';
+import { DuckType, Duck } from './types';
 
 const duckName: string = 'Daffy';
 const duckAge: number = 3;
@@ -6,14 +7,6 @@ const duckAge: number = 3;
 let duckColor: string = 'Black';
 
 const ducks: string[] = ['Daffy'];
-
-type Duck = {
-  name: string;
-  age: number;
-  type: string;
-  color: string;
-  favouriteFood?: string; // Optional property
-};
 
 const duck: Duck = {
   name: 'Daffy',
@@ -35,7 +28,7 @@ const makeDuckQuack = (duck: Duck, times: number = 1): void => {
 
 makeDuckQuack(duck, 2);
 
-const duck1 = new PondDuck('Donald', 2, 'Mallard', 'Green', 'Bread');
+const duck1 = new PondDuck('Donald', 2, DuckType.MALLARD, 'Green', 'Bread');
 duck1.quack();
 duck1.fly();
 duck1.land();

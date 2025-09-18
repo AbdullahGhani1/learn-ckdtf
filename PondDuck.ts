@@ -18,7 +18,6 @@ export default class PondDuck {
   }
 
   quack(times: number = 1): void {
-    console.log(`${this.name} says: Quack!`);
     for (let i = 0; i < times; i++) {
       console.log(`${this.name} the  ${this.color} ${this.type} duck says: Quack!`);
     }

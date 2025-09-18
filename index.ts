@@ -1,3 +1,6 @@
-const helloWorld: string = "Hello World!";
+const duckName: string = 'Daffy';
+const duckAge: number = 3;
 
-console.log(helloWorld);
+let duckColor: string = 'Black';
+
+console.log(duckAge);

@@ -5,12 +5,13 @@ let duckColor: string = 'Black';
 
 const ducks: string[] = ['Daffy'];
 
-interface Duck {
+type Duck = {
   name: string;
   age: number;
   type: string;
   color: string;
-}
+  favouriteFood?: string; // Optional property
+};
 
 const duck: Duck = {
   name: 'Daffy',
@@ -19,4 +20,15 @@ const duck: Duck = {
   color: 'Black',
 };
 
-console.log(duck.age);
+duck.favouriteFood = 'Pizza';
+
+console.log(duck);
+
+function makeDuckQuack(duck: Duck, times: number = 1): void {
+  const quackCount = times;
+  for (let i = 0; i < quackCount; i++) {
+    console.log(`${duck.name} says: Quack`);
+  }
+}
+
+makeDuckQuack(duck, 2);

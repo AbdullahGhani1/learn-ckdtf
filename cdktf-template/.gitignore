@@ -9,3 +9,16 @@ cdktf.log
 tsconfig.tsbuildinfo
 !jest.config.js
 !setup.js
+
+# Yarn
+
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/release
+!.yarn/sdks
+!.yarn/versions
+
+.pnp.*
+
+node_modules/

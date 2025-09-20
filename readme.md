@@ -25,7 +25,6 @@ nppm -v
 - install Terraform CLI
 
 ```sh
-
 brew tap hashicorp/tap
 brew install hashicorp/tap/terraform
 brew update
@@ -52,4 +51,54 @@ https://developer.hashicorp.com/terraform/cdktf/create-and-deploy/configuration
 -file#enable-crash-reporting-for-the-cli for more information no
 Note: You can always add providers using 'cdktf provider add' later on
 ? What providers do you want to use?
+```
+
+## Use Yarn Package manager
+
+- delete package-lock.json file
+
+```sh
+corepack prepare yarn@stable --activate
+touch yarn.lock
+yarn config set nodeLinker node-modules
+yarn install
+yarn -v
+```
+
+Add to .gitignore
+
+```.gitignore
+# Yarn
+
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/release
+!.yarn/sdks
+!.yarn/versions
+
+.pnp.*
+
+node_modules/
+```
+
+Add cdktf-cli to Project
+
+```sh
+yarn add -D cdktf-cli
+```
+
+CDKTF Init Overview
+
+- CDKTF Init Validation
+
+```sh
+yarn cdktf synth
+yarn cdktf deploy
+```
+
+Deploy the CDKTF Project
+
+```sh
+cdktf deploy --auto-approve
 ```
